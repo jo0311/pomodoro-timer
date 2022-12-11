@@ -1,3 +1,6 @@
+require 'bundler'
+Bundler.require
+
 class TimerBase
   def initialize(minutes:)
     # 終了時間
@@ -14,6 +17,7 @@ class TimerBase
       # 残りの秒数から残りの分数に60をかけたものを減算して、残りの分数を除いて表示する秒数
       remaining_seconds = format('%02d', diff_seconds - remaining_minites * 60)
       print "\r#{remaining_minites}:#{remaining_seconds}"
+      # Timecop.travel(@end_time) unless ENV['DEBUG'].nil?
     end
     puts
   end

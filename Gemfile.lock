@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    timecop (0.9.6)
+
+PLATFORMS
+  x86_64-darwin-21
+
+DEPENDENCIES
+  timecop
+
+BUNDLED WITH
+   2.2.32
